@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 17% 30% 30% 23%;
+    grid-template-rows: 20% 40% 40%;
+    grid-template-areas: "nav header   header   header"
+                         "nav projects projects announcements"
+                         "nav projects projects trending";
+    height: 100vh;
+    width: 100vw;
+    align-content: space-between;
+}
+
+/* -----Side-nav----- */
+
+nav {
+    grid-area: nav;
+    background-color: rgb(52, 97, 194);
+    padding: 1.5rem;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    padding-left: .5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    
+}
+
+li {
+    display: flex; 
+    list-style: none;
+    padding: 1rem;
+    align-items: center;
+    overflow: hidden;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    justify-items: left;
+    padding: 1rem;
+    align-items: center;
+    color: white;
+    padding-bottom: 3rem;
+}
+
+.config {
+    position: absolute;
+    bottom: 3%;
+}
+
+/* -----Header-----*/
+
+header {
+    grid-area: header;
+    display: grid;
+    grid-template-rows: 35% 65%;
+    box-shadow: 0px 0px 10px gray;
+    background-color: rgb(243, 243, 243);
+    z-index: 1;
+    padding: 1rem;
+    align-content: space-between;
+}
+
+input {
+    border-radius: 1.5rem;
+    border: 0;
+    padding: .7rem 1rem;
+    background-color: rgb(223, 223, 223);
+    outline: none;
+}
+
+.search {
+    display: grid;
+    grid-template-columns: 30px auto 30px 40px 150px;
+    align-items: center;
+    gap: 1rem 2rem;
+}
+
+.user {
+    display: grid;
+    grid-template-columns: 70px auto auto;
+    padding: 0rem 1rem;
+    gap: 2rem;
+    align-items: center;
+}
+
+.user button {
+    background-color: rgb(52, 97, 194);
+    color: white;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 1.6rem;
+}
+
+.btns {
+    justify-content:right;
+}
+
+/* -----Your Projects---- */
+
+.projects {
+    grid-area: projects;
+    display: grid;
+    background-color: rgb(218, 231, 238);
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+
+.projects h1 {
+    grid-column:1/3;
+    align-self: center;
+}
+
+.project {
+    border: 0px solid;
+    background-color: rgb(243, 243, 243);
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 5px 5px 10px rgb(190, 188, 188);
+    border-left: .7rem solid orange;
+    position: relative;
+    text-overflow: ellipsis;
+}
+
+.project p {
+    padding: 1rem;
+    padding-left: 0;
+
+}
+
+.project-btns {
+    display: grid;
+    grid-template-columns: 25px 25px 25px;
+    gap: 1rem;
+    position: absolute;
+    bottom: 5%;
+    right: 10%;
+}
+
+button {
+    background-color: transparent;
+    border: 0;
+}
+
+button:active {
+    opacity: 50%;
+}
+
+.icon {
+    height: 25px;
+    justify-self: right;
+}
+
+/* -----Announcements & Trending-----*/
+
+.announcements {
+    grid-area: announcements;
+    background-color: rgb(218, 231, 238);
+    padding: 1rem;
+    padding-right: 2rem;
+    
+}
+
+.announcements h1, .trending h1 {
+    padding: 1.5rem 0rem;
+}
+
+.news, .users {
+    background-color: rgb(243, 243, 243);
+    box-shadow: 5px 5px 10px rgb(190, 188, 188);
+    padding: 1rem;
+    border-radius: 1rem;
+    display: block;
+}
+
+.news p, .users p {
+    padding: 1rem;
+    border-top: 1px solid rgba(128, 128, 128, 0.486);
+}
+
+.news p:first-child, 
+.users p:first-child {
+    border: 0;
+}
+
+.trending {
+    grid-area: trending;
+    background-color: rgb(218, 231, 238);
+    padding: 1rem;
+    padding-right: 2rem;
+}
+
+
+
